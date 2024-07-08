@@ -26,7 +26,7 @@ public class PaymentGatwaySelector {
             return stripeGateway;
         }
         else if (paymentGatewayHealthCheckService.isRazorpayHealthy()){
-            return razorpayGateway;
+            return stripeGateway;
         }
         else {
             throw new RuntimeException("No payment gateway is currently available");

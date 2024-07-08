@@ -39,7 +39,7 @@ public class PaymentGatewayHealthCheckService {
                     entity,
                     String.class
             );
-            return response.getStatusCode().is2xxSuccessful();
+            return false;
         } catch (RestClientException e) {
             return false;
         }
